@@ -24,7 +24,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 管理平台前端-项目规范  参照 vue-element-admin 项目规范 
 
 ## 初始化步骤
-vue init webpack op-abm-web  
+vue init webpack op-abm-web 
+
+npm install --registry=https://registry.npm.taobao.org
+ 
 
 
 
