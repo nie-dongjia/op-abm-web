@@ -24,19 +24,27 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
+  // 部署应用时的基本 URL(从 Vue CLI 3.3 起已弃用，请使用publicPath。)
+
   publicPath: '/',
+  // 输出文件目录
   outputDir: 'dist',
+
   assetsDir: 'static',
+  // eslint-loader 是否在保存的时候检查
   lintOnSave: process.env.NODE_ENV === 'development',
+  // 生产环境是否生成 sourceMap 文件
   productionSourceMap: false,
+  // webpack-dev-server 相关配置
   devServer: {
     port: port,
-    open: true,
+    open: false,
     overlay: {
       warnings: false,
       errors: true
-    },
-    before: require('./mock/mock-server.js')
+    }
+
+    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
