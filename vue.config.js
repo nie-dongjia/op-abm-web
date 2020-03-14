@@ -32,7 +32,7 @@ module.exports = {
 
   assetsDir: 'static',
   // eslint-loader 是否在保存的时候检查
-  lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'sit',
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: false,
   // webpack-dev-server 相关配置
@@ -43,8 +43,7 @@ module.exports = {
       warnings: false,
       errors: true
     }
-
-    // before: require('./mock/mock-server.js')
+    // ,before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
