@@ -1,24 +1,24 @@
 import request from '@/utils/request'
-
+// 登录
 export function login(data) {
   return request({
-    url: '/abm-web/user/login',
+    url: '/auth/login',
     method: 'post',
     data
   })
 }
-
+// 获取用户信息 包括 角色、菜单
 export function getInfo(token) {
   return request({
-    url: '/abm-web/user/info',
+    url: '/sys/user/info',
     method: 'get',
     params: { token }
   })
 }
-
+// 登出
 export function logout() {
   return request({
-    url: '/abm-web/user/logout',
+    url: '/auth/logout',
     method: 'post'
   })
 }

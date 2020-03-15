@@ -13,7 +13,7 @@ const data = Mock.mock({
 
 export default [
   {
-    url: '/abm-web/table/list',
+    url: '/table/list',
     type: 'get',
     response: config => {
       const items = data.items
