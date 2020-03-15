@@ -82,3 +82,20 @@ https://blog.csdn.net/qq_41009742/article/details/90613114
 https://blog.csdn.net/linbenjian/article/details/85261201?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 
+
+
+## 接口方案
+引入网关是一个非常不错的方案，网关可以给不同的应用提供服务  网关整合认证权限模块 前后端分离 
+提供不同环境的网关 
+网关地址/所属模块/具体接口 
+
+
+## 登录权限设计  
+手摸手，带你用vue撸后台 系列二(登录权限篇) 
+https://juejin.im/post/591aa14f570c35006961acac
+https://blog.csdn.net/sky1679/article/details/90905198 
+token是用户登录时后端返回的，可以存在localstorage中，而role是必须要时刻请求的，不能缓存，毕竟如果一个普通用户也有token，
+它要是自己把localstorage里的role从普通用户改成了admin，这就会引起大麻烦。 
+
+
+## 
