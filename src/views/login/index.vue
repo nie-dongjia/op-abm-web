@@ -6,15 +6,15 @@
         <h3 class="title">用户中心管理平台</h3>
       </div>
 
-      <el-form-item prop="username">
+      <el-form-item prop="userName">
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
         <el-input
-          ref="username"
-          v-model="loginForm.username"
+          ref="userName"
+          v-model="loginForm.userName"
           placeholder="Username"
-          name="username"
+          name="userName"
           type="text"
           tabindex="1"
           auto-complete="on"
@@ -48,13 +48,13 @@
 </template>
 
 <script>
-import { validUsername } from '@/utils/validate'
+import { validUserName } from '@/utils/validate'
 
 export default {
   name: 'Login',
   data() {
-    const validateUsername = (rule, value, callback) => {
-      if (!validUsername(value)) {
+    const validateUserName = (rule, value, callback) => {
+      if (!validUserName(value)) {
         callback(new Error('Please enter the correct user name'))
       } else {
         callback()
@@ -73,7 +73,7 @@ export default {
         password: '111111'
       },
       loginRules: {
-        username: [{ required: true, trigger: 'blur', validator: validateUsername }],
+        userName: [{ required: true, trigger: 'blur', validator: validateUserName }],
         password: [{ required: true, trigger: 'blur', validator: validatePassword }]
       },
       loading: false,
